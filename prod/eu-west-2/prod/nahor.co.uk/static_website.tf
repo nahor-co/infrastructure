@@ -1,6 +1,6 @@
 module "static_website" {
 
-  source = "git@github.com:nahor-co/terraform-modules.git//aws/static_website?ref=0.0.2"
+  source = "git@github.com:nahor-co/terraform-modules.git//aws/static_website?ref=0.0.3"
 
   domain = "nahor.co.uk"
 
