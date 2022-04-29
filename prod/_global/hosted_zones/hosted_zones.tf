@@ -6,11 +6,11 @@ locals {
 }
 module "hosted_zone" {
 
-    for_each = local.domains
+  for_each = local.domains
 
-    source = "git@github.com:nahor-co/terraform-modules.git//aws/hosted_zone"
-    #source = "../../../../terraform-modules/aws/hosted_zone"
+  source = "git@github.com:nahor-co/terraform-modules.git//aws/hosted_zone"
+  #source = "../../../../terraform-modules/aws/hosted_zone"
 
-    domain = each.value
+  domain = each.value
 
 }

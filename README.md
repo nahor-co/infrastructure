@@ -4,7 +4,7 @@ Root deployable entities
 
 ## Structure 
 
-<account>/<region>/<environment>
+\<account\>/\<region\>/\<environment\>
 
 ```
 .
@@ -17,6 +17,6 @@ Root deployable entities
             └── nahor.co.uk
 ```
 
-## Practice
+## Development
 
 Provide inputs to module call
