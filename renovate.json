@@ -2,15 +2,16 @@
   "extends": [
     "config:base"
   ],
-  "packageRules": [
-    {
-      "packagePatterns": ["aws", "boto"],
-      "groupName": "aws packages",
-      "automerge": true,
-      "automergeType": "branch",
-      "major": {
-        "automerge": false
-      }
-    }
-  ]
+  'regexManagers':
+    [
+      {
+        'fileMatch': ['.*'],
+        'matchStrings':
+          [
+            ".*amiFilter=(?<lookupName>.*?)\\n(.*currentImageName=(?<currentDigest>.*?)\\n)?(.*\\n)?.*?(?<depName>[a-zA-Z0-9-_:]*)[ ]*?[:|=][ ]*?[\"|']?(?<currentValue>ami-[a-z0-9]{17})[\"|']?.*",
+          ],
+        'datasourceTemplate': 'aws-machine-image',
+        'versioningTemplate': 'aws-machine-image',
+      },
+    ]
 }
