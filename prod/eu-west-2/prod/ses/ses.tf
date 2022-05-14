@@ -1,7 +1,7 @@
 locals{
   # amiFilter=[{"Name":"owner-id","Values":["602401143452"]},{"Name":"name","Values":["amazon-eks-node-1.21-*"]}]
-  # currentImageName=unknown
-  ami_test= "ami-02ce3d9008cab69cb"
+  # currentImageName=amazon-eks-node-1.21-v20220429
+  ami_test= "ami-0ea8b161ec7a54986"
 }
 
 module "ses" {
