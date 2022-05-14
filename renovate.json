@@ -1,17 +1,19 @@
 {
   "extends": [
+    "github>whitesource/merge-confidence:beta",
+    "github>renovatebot/spring-remediations",
     "config:base"
   ],
-  'regexManagers':
-    [
-      {
-        'fileMatch': ['.*'],
-        'matchStrings':
-          [
-            ".*amiFilter=(?<lookupName>.*?)\\n(.*currentImageName=(?<currentDigest>.*?)\\n)?(.*\\n)?.*?(?<depName>[a-zA-Z0-9-_:]*)[ ]*?[:|=][ ]*?[\"|']?(?<currentValue>ami-[a-z0-9]{17})[\"|']?.*",
-          ],
-        'datasourceTemplate': 'aws-machine-image',
-        'versioningTemplate': 'aws-machine-image',
-      },
-    ]
+  "regexManagers": [
+    {
+      "fileMatch": [
+        ".*"
+      ],
+      "matchStrings": [
+        ".*amiFilter=(?<packageName>.*?)\\n(.*currentImageName=(?<currentDigest>.*?)\\n)?(.*\\n)?.*?(?<depName>[a-zA-Z0-9-_:]*)[ ]*?[:|=][ ]*?[\"|']?(?<currentValue>ami-[a-z0-9]{17})[\"|']?.*"
+      ],
+      "datasourceTemplate": "aws-machine-image",
+      "versioningTemplate": "aws-machine-image"
+    }
+  ]
 }
