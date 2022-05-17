@@ -1,6 +1,6 @@
 module "github_oidc" {
 
-  source = "git@github.com:nahor-co/terraform-modules.git//aws/github_oidc?ref=github_oidc-0.0.4"
+  source = "git@github.com:nahor-co/terraform-modules.git//aws/github_oidc?ref=0.0.5"
 
   github = {
     owner  = "nahor-co"
